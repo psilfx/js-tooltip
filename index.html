@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подсказка с клавиатурной навигацией</title>
+	<script src="js/tooltip.js"></script>
+    <style>
+        .tooltip-item:hover, 
+        .tooltip-item.highlighted {
+            background: #f0f0f0;
+        }
+        .input-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <input type="text" placeholder="Какой то текст...">
+        <div class="tooltip" >
+            <div class="tooltip-item" >Пункт 1</div>
+            <div class="tooltip-item" >Пункт 2</div>
+            <div class="tooltip-item" >Пункт 3</div>
+            <div class="tooltip-item" >Пункт 4</div>
+            <div class="tooltip-item" >Пункт 5</div>
+        </div>
+    </div>
+    <script>
+		let tooltip = new InputTooltip( document.querySelector( 'input' ) , document.querySelector( '.tooltip' ) ); 
+    </script>
+</body>
+</html>
